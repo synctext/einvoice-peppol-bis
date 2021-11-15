@@ -15,6 +15,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.Source;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathFactory;
+import java.io.FileReader;
 import java.io.InputStream;
 import java.io.StringReader;
 import java.util.Iterator;

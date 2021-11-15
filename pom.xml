@@ -6,7 +6,7 @@
 
     <groupId>pl.owlsy</groupId>
     <artifactId>einvoice-peppol-bis</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>A library for working with PEPPOL BIS Billing 3.0</description>
     <url>https://github.com/owlsy/einvoice-peppol-bis</url>
@@ -139,6 +139,19 @@
                         <id>attach-javadocs</id>
                         <goals>
                             <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>2.3</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
                         </goals>
                     </execution>
                 </executions>

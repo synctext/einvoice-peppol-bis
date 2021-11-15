@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:tns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import schemaLocation="Faktura_3.0_PEF_wersja_2.5_schema1.xsd" namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" />
+    <xs:element name="InvoicePeriod">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element xmlns:q1="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q1:StartDate" />
+                <xs:element xmlns:q2="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q2:EndDate" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OrderReference">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element xmlns:q3="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q3:ID" />
+                <xs:element xmlns:q4="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q4:SalesOrderID" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="BillingReference">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="InvoiceDocumentReference">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q5="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q5:ID" />
+                            <xs:element xmlns:q6="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q6:IssueDate" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DespatchDocumentReference">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element xmlns:q7="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q7:ID" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ReceiptDocumentReference">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element xmlns:q8="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q8:ID" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="OriginatorDocumentReference">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element xmlns:q9="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q9:ID" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ContractDocumentReference">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element xmlns:q10="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q10:ID" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="AdditionalDocumentReference">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element xmlns:q11="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q11:ID" />
+                <xs:element xmlns:q12="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q12:DocumentDescription" />
+                <xs:element minOccurs="0" name="Attachment">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ExternalReference">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q13="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q13:URI" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="ProjectReference">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element xmlns:q14="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q14:ID" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="AccountingSupplierParty">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Party">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q15="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q15:EndpointID" />
+                            <xs:element name="PartyIdentification">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q16="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q16:ID" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="PartyName">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q17="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q17:Name" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="PostalAddress">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q18="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q18:StreetName" />
+                                        <xs:element xmlns:q19="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q19:AdditionalStreetName" />
+                                        <xs:element xmlns:q20="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q20:CityName" />
+                                        <xs:element xmlns:q21="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q21:PostalZone" />
+                                        <xs:element xmlns:q22="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q22:CountrySubentity" />
+                                        <xs:element name="AddressLine">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element xmlns:q23="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q23:Line" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Country">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element xmlns:q24="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q24:IdentificationCode" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="PartyTaxScheme">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q25="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q25:CompanyID" />
+                                        <xs:element name="TaxScheme">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element xmlns:q26="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q26:ID" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="PartyLegalEntity">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q27="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q27:RegistrationName" />
+                                        <xs:element xmlns:q28="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q28:CompanyID" />
+                                        <xs:element xmlns:q29="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q29:CompanyLegalForm" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Contact">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q30="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q30:Name" />
+                                        <xs:element xmlns:q31="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q31:Telephone" />
+                                        <xs:element xmlns:q32="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q32:ElectronicMail" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="AccountingCustomerParty">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Party">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q33="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q33:EndpointID" />
+                            <xs:element name="PartyIdentification">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q34="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q34:ID" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="PartyName">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q35="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q35:Name" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="PostalAddress">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q36="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q36:StreetName" />
+                                        <xs:element xmlns:q37="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q37:AdditionalStreetName" />
+                                        <xs:element xmlns:q38="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q38:CityName" />
+                                        <xs:element xmlns:q39="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q39:PostalZone" />
+                                        <xs:element xmlns:q40="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q40:CountrySubentity" />
+                                        <xs:element name="AddressLine">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element xmlns:q41="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q41:Line" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Country">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element xmlns:q42="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q42:IdentificationCode" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="PartyTaxScheme">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q43="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q43:CompanyID" />
+                                        <xs:element name="TaxScheme">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element xmlns:q44="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q44:ID" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="PartyLegalEntity">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q45="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q45:RegistrationName" />
+                                        <xs:element xmlns:q46="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q46:CompanyID" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Contact">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q47="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q47:Name" />
+                                        <xs:element xmlns:q48="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q48:Telephone" />
+                                        <xs:element xmlns:q49="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q49:ElectronicMail" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="PayeeParty">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="PartyIdentification">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q50="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q50:ID" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PartyName">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q51="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q51:Name" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PartyLegalEntity">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q52="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q52:CompanyID" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="TaxRepresentativeParty">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="PartyName">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q53="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q53:Name" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PostalAddress">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q54="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q54:StreetName" />
+                            <xs:element xmlns:q55="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q55:AdditionalStreetName" />
+                            <xs:element xmlns:q56="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q56:CityName" />
+                            <xs:element xmlns:q57="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q57:PostalZone" />
+                            <xs:element xmlns:q58="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q58:CountrySubentity" />
+                            <xs:element name="AddressLine">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q59="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q59:Line" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Country">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q60="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q60:IdentificationCode" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PartyTaxScheme">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q61="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q61:CompanyID" />
+                            <xs:element name="TaxScheme">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q62="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q62:ID" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Delivery">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element xmlns:q63="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q63:ActualDeliveryDate" />
+                <xs:element name="DeliveryLocation">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q64="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q64:ID" />
+                            <xs:element name="Address">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q65="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q65:StreetName" />
+                                        <xs:element xmlns:q66="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q66:AdditionalStreetName" />
+                                        <xs:element xmlns:q67="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q67:CityName" />
+                                        <xs:element xmlns:q68="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q68:PostalZone" />
+                                        <xs:element xmlns:q69="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q69:CountrySubentity" />
+                                        <xs:element name="AddressLine">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element xmlns:q70="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q70:Line" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Country">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element xmlns:q71="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q71:IdentificationCode" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DeliveryParty">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="PartyName">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q72="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q72:Name" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="PaymentMeans">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element xmlns:q73="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q73:PaymentMeansCode" />
+                <xs:element xmlns:q74="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q74:PaymentID" />
+                <xs:element name="CardAccount">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q75="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q75:PrimaryAccountNumberID" />
+                            <xs:element xmlns:q76="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q76:NetworkID" />
+                            <xs:element xmlns:q77="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q77:HolderName" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PayeeFinancialAccount">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q78="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q78:ID" />
+                            <xs:element xmlns:q79="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q79:Name" />
+                            <xs:element name="FinancialInstitutionBranch">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q80="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q80:ID" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PaymentMandate">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q81="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q81:ID" />
+                            <xs:element name="PayerFinancialAccount">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q82="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q82:ID" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="PaymentTerms">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element xmlns:q83="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q83:Note" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="AllowanceCharge">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element xmlns:q84="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q84:ChargeIndicator" />
+                <xs:element xmlns:q85="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q85:AllowanceChargeReasonCode" />
+                <xs:element xmlns:q86="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q86:AllowanceChargeReason" />
+                <xs:element xmlns:q87="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q87:MultiplierFactorNumeric" />
+                <xs:element xmlns:q88="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q88:Amount" />
+                <xs:element xmlns:q89="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q89:BaseAmount" />
+                <xs:element name="TaxCategory">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q90="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q90:ID" />
+                            <xs:element xmlns:q91="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q91:Percent" />
+                            <xs:element name="TaxScheme">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q92="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q92:ID" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="TaxTotal">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element xmlns:q93="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q93:TaxAmount" />
+                <xs:element minOccurs="0" name="TaxSubtotal">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q94="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q94:TaxableAmount" />
+                            <xs:element xmlns:q95="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q95:TaxAmount" />
+                            <xs:element name="TaxCategory">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q96="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q96:ID" />
+                                        <xs:element xmlns:q97="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q97:Percent" />
+                                        <xs:element name="TaxScheme">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element xmlns:q98="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q98:ID" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="LegalMonetaryTotal">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element xmlns:q99="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q99:LineExtensionAmount" />
+                <xs:element xmlns:q100="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q100:TaxExclusiveAmount" />
+                <xs:element xmlns:q101="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q101:TaxInclusiveAmount" />
+                <xs:element xmlns:q102="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q102:AllowanceTotalAmount" />
+                <xs:element xmlns:q103="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q103:ChargeTotalAmount" />
+                <xs:element xmlns:q104="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q104:PrepaidAmount" />
+                <xs:element xmlns:q105="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q105:PayableAmount" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="InvoiceLine">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element xmlns:q106="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q106:ID" />
+                <xs:element xmlns:q107="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q107:Note" />
+                <xs:element xmlns:q108="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q108:InvoicedQuantity" />
+                <xs:element xmlns:q109="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q109:LineExtensionAmount" />
+                <xs:element xmlns:q110="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q110:AccountingCost" />
+                <xs:element name="InvoicePeriod">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q111="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q111:StartDate" />
+                            <xs:element xmlns:q112="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q112:EndDate" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="OrderLineReference">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q113="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q113:LineID" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DocumentReference">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q114="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q114:ID" />
+                            <xs:element xmlns:q115="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q115:DocumentTypeCode" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" name="AllowanceCharge">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q116="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q116:ChargeIndicator" />
+                            <xs:element xmlns:q117="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q117:AllowanceChargeReasonCode" />
+                            <xs:element xmlns:q118="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q118:AllowanceChargeReason" />
+                            <xs:element xmlns:q119="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q119:MultiplierFactorNumeric" />
+                            <xs:element xmlns:q120="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q120:Amount" />
+                            <xs:element xmlns:q121="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q121:BaseAmount" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Item">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q122="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q122:Description" />
+                            <xs:element xmlns:q123="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q123:Name" />
+                            <xs:element name="BuyersItemIdentification">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q124="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q124:ID" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="SellersItemIdentification">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q125="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q125:ID" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="StandardItemIdentification">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q126="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q126:ID" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="OriginCountry">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q127="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q127:IdentificationCode" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element maxOccurs="unbounded" name="CommodityClassification">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q128="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q128:ItemClassificationCode" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="ClassifiedTaxCategory">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q129="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q129:ID" />
+                                        <xs:element xmlns:q130="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q130:Percent" />
+                                        <xs:element name="TaxScheme">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element xmlns:q131="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q131:ID" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="AdditionalItemProperty">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q132="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q132:Name" />
+                                        <xs:element xmlns:q133="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q133:Value" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Price">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element xmlns:q134="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q134:PriceAmount" />
+                            <xs:element xmlns:q135="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q135:BaseQuantity" />
+                            <xs:element name="AllowanceCharge">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element xmlns:q136="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q136:ChargeIndicator" />
+                                        <xs:element xmlns:q137="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q137:Amount" />
+                                        <xs:element xmlns:q138="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" ref="q138:BaseAmount" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

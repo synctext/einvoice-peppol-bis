@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice 
+	xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" 
+	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" 
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" 
+	xmlns:ccts="urn:un:unece:uncefact:documentation:2" 
+	xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" 
+	xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"																											
+	>
+	
+	<cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0</cbc:CustomizationID>	<!--  wersja komunikatu / message version   -->
+	<cbc:ProfileID>urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</cbc:ProfileID>																				<!--  identyfikator procesu biznesowego / business process identifier  -->
+	<cbc:ID>INVOICE_PeF_1.0</cbc:ID>																																	<!--  numer faktury / invoice number -->
+	<cbc:IssueDate>2018-08-31</cbc:IssueDate>																														<!--  data wystawienia faktury / Invoice issue date  -->
+	<cbc:DueDate>2018-09-30</cbc:DueDate>																															<!--  termin płatności faktury / Payment due date  -->
+	<cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>																												<!--  identyfikator typu faktury / Invoice type code -->
+	<cbc:Note>registration court and registration number, initial capital, invested capital</cbc:Note>											  	<!--  uwagi tekstowe do faktury / Invoice note  -->
+	<cbc:DocumentCurrencyCode>PLN</cbc:DocumentCurrencyCode>																						<!--  kod waluty faktury / Invoice currency code -->
+	<cbc:TaxCurrencyCode>EUR</cbc:TaxCurrencyCode>																										<!--  kod waluty podatku VAT / VAT accounting currency code  -->
+	<cbc:AccountingCost>koszty 123</cbc:AccountingCost>																									<!--  znak stanowiska kosztów u nabywcy / Buyer accounting reference  -->
+	<cbc:BuyerReference>12345</cbc:BuyerReference>																											<!--  referencja kupującego / Buyer reference -->	
+	<cac:InvoicePeriod>																																							<!--  okres fakturowany / invoice period -->	
+		<cbc:StartDate>2018-08-01</cbc:StartDate>																													<!--  data początku okresu fakturowania / Invoicing period start date   -->	
+		<cbc:EndDate>2018-08-31</cbc:EndDate>																														<!--  data końca okresu fakturowania / Invoicing period end date  -->	
+	</cac:InvoicePeriod>
+	<cac:OrderReference>																																						<!--  referencje do zamówienia  -->
+		<cbc:ID>123</cbc:ID>																																					<!--  identyfikator (numer) zamówienia / Purchase order identifier  -->
+		<cbc:SalesOrderID>SO123</cbc:SalesOrderID>																												<!--  numer zamówienia wg dostawcy / Sales order identifier -->
+	</cac:OrderReference>
+	<cac:BillingReference>																																						<!--  referencje do faktury  -->
+		<cac:InvoiceDocumentReference>
+			<cbc:ID>F12345</cbc:ID>																																			<!--  numer faktury poprzedzającej (powiązanej) / Preceding Invoice number  -->
+			<cbc:IssueDate>2018-06-04</cbc:IssueDate>																												<!--  data faktury poprzedzającej (powiązanej) / Preceding Invoice date  -->
+		</cac:InvoiceDocumentReference>
+	</cac:BillingReference>
+	<cac:DespatchDocumentReference>																																	<!--  referencje do dokumentu awiza wysyłki / Despatch Advice reference -->
+		<cbc:ID>D12345</cbc:ID>																																				<!--  numer dokumentu awiza wysyłki / Despatch advice identifier  -->
+	</cac:DespatchDocumentReference>
+	<cac:ReceiptDocumentReference>																																		<!--  referencje do dokumentu potwierdzenia odbioru / Receiving advice reference -->
+		<cbc:ID>R12345</cbc:ID>																																				<!--  numer dokumentu potwierdzenia odbioru / Receiving advice identifier  -->
+	</cac:ReceiptDocumentReference>
+	<cac:OriginatorDocumentReference>																																	<!--  referencje do dokumentu zamawiającego / buyer document reference -->
+		<cbc:ID>O12345</cbc:ID>																																				<!--  znak ogłoszenia przetargowego lub jego części / The identification of the call for tender or lot  -->
+	</cac:OriginatorDocumentReference>
+	<cac:ContractDocumentReference>																																	<!--  referencje do kontraktu / contract reference -->
+		<cbc:ID>Contract321</cbc:ID>																																		<!--  numer kontraktu / Contract identifier  -->
+	</cac:ContractDocumentReference>
+	<cac:AdditionalDocumentReference>																																	<!--  referencje do dowodu dostawy / Receiving advice reference -->
+		<cbc:ID>R001</cbc:ID>														                																<!--  numer dowodu dostawy / Receiving advice number -->
+		<cbc:DocumentDescription>receiving advice</cbc:DocumentDescription>
+	</cac:AdditionalDocumentReference>
+	<cac:AdditionalDocumentReference>																																	<!--  referencje do zamówienia u dostawcy / seller order reference -->
+		<cbc:ID>R002</cbc:ID>																                														<!--  numer zamówienia u dostawcy / order number by seller -->
+		<cbc:DocumentDescription>order supplier</cbc:DocumentDescription>
+	</cac:AdditionalDocumentReference>
+	<cac:AdditionalDocumentReference>																																	<!--  referencje do harmonogramu dostaw / timetable reference -->
+		<cbc:ID>Doc1</cbc:ID>																					                									<!--  numer harmonogramu dostaw / timetable number -->
+		<cbc:DocumentDescription>Harmonogram dostaw</cbc:DocumentDescription>
+		<cac:Attachment>
+			<cac:ExternalReference>
+				<cbc:URI>http://www.dostawca.eu/sheet001.html</cbc:URI>																					<!--  link do harmonogramu dostaw / timetable location link-->
+			</cac:ExternalReference>
+		</cac:Attachment>
+	</cac:AdditionalDocumentReference>
+	<cac:ProjectReference>																																						<!--  referencja do projektu / Project reference -->
+		<cbc:ID>PROJ01</cbc:ID>																																			<!--  numer projektu / Project reference number -->
+	</cac:ProjectReference>
+	<cac:AccountingSupplierParty>																																			<!--  dane sprzedawcy / supplier data -->
+		<cac:Party>
+			<cbc:EndpointID schemeID="9945">7770005132</cbc:EndpointID>																				<!--  identyfikator „Endpoint” – punktu dostępu w sieci (Sprzedawca) - MPK / "Endpoint" identifier – Supplier’s (MPK) access point in the network-->
+			<cac:PartyIdentification>
+				<cbc:ID>7770005132</cbc:ID>																																<!--  identyfikator sprzedawcy (zgodny z listą PEPPOL) / supplier's identifier (PePPOL Id)  -->
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>MPK w Poznaniu Sp. z o.o. </cbc:Name>																							<!--  nazwa sprzedawcy / supplier's name  -->
+			</cac:PartyName>
+			<cac:PostalAddress>																																				<!--  adres sprzedawcy / supplier's address  -->
+				<cbc:StreetName>Głogowska</cbc:StreetName>																									<!--  linia adresu cz.1 (nazwa ulicy) / address line part 1 (street name)  -->
+				<cbc:AdditionalStreetName>131/133</cbc:AdditionalStreetName>																			<!--  linia adresu cz.2 (c.d. nazwa ulicy) / address line part 2 (street name)  -->
+				<cbc:CityName>Poznańi</cbc:CityName>																												<!--  nazwa miejscowości / the name of the town  -->
+				<cbc:PostalZone>60-244</cbc:PostalZone>																											<!--  kod pocztowy / Zip (postal) code  -->
+				<cbc:CountrySubentity>Wlkp</cbc:CountrySubentity>																								<!--  nazwa regionu / the region of the country name  -->
+				<cac:AddressLine>
+					<cbc:Line>ptr. 3</cbc:Line>																																<!--  linia adresu cz.3 (dodatkowe informacje adresu) / address line part 3 (additional address information)  -->
+				</cac:AddressLine>
+				<cac:Country>
+					<cbc:IdentificationCode>PL</cbc:IdentificationCode>																							<!--  kod kraju / Country code  -->
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID>PL7770005132</cbc:CompanyID>																								<!--  numer rejestracji podatkowej VAT (NIP) sprzedawcy / the VAT registration number of the supplier  -->
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>																																		<!--  typ podatku (VAT) / type of tax (VAT)  -->
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>																																				<!--  dane rejestracyjne sprzedawcy / supplier legal registration data -->
+				<cbc:RegistrationName>MPK w Poznaniu Sp. z o.o.</cbc:RegistrationName>															<!--  nazwa rejestrowa sprzedawcy / supplier registration name -->
+				<cbc:CompanyID>7770005132</cbc:CompanyID>																									<!--  identyfikator rejestrowy sprzedawcy / supplier registration identifier -->
+				<cbc:CompanyLegalForm>Forma prawna</cbc:CompanyLegalForm>																		<!--  informacje: kapitał, ... / legal notes  -->
+			</cac:PartyLegalEntity>
+			<cac:Contact>																																							<!--  dane kontaktowe siedziby sprzedawcy / supplier premise contact data-->
+				<cbc:Name>Imię Nazwisko</cbc:Name>																												<!--  imię i nazwisko osoby kontaktowej / contact person name and surname-->
+				<cbc:Telephone>614621230</cbc:Telephone>																											<!--  numer telefonu osoby kontaktowej / contact person phone no -->
+				<cbc:ElectronicMail>aaaaa@dostawca.eu</cbc:ElectronicMail>																				<!--  adres e-mail osoby kontaktowej / contact person e-mail address -->
+			</cac:Contact>
+		</cac:Party>
+	</cac:AccountingSupplierParty>
+	<cac:AccountingCustomerParty>																																		<!--  dane klienta / customer data -->
+		<cac:Party>
+			<cbc:EndpointID schemeID="9945">7792346900</cbc:EndpointID>																				<!--  identyfikator „Endpoint” (zgodny z listą PEPPOL) – punktu dostępu w sieci (Odbiorca) - ZTM / "Endpoint" identifier – Deliver to ( Id of ZTM) access point in the network  -->
+			<cac:PartyIdentification>
+				<cbc:ID>2090001440</cbc:ID>																																<!--  identyfikator nabywcy (zgodny z listą PEPPOL) Miasto Poznan / / "Endpoint" identifier – Customer - Id of Poznan City -->
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>Miasto Poznań</cbc:Name>																												<!--  nazwa nabywcy / customer name -->
+			</cac:PartyName>
+			<cac:PostalAddress>																																				<!--  adres nabywcy / customer address -->
+				<cbc:StreetName>Plac Kolegiacki</cbc:StreetName>																								<!--  linia adresu cz.1 (nazwa ulicy) / address line part 1 (street name)  -->
+				<cbc:AdditionalStreetName>17</cbc:AdditionalStreetName>																					<!--  linia adresu cz.2 (nazwa ulicy) / address line part 2 (street name)  -->
+				<cbc:CityName>Poznań</cbc:CityName>																												<!--  nazwa miejscowości / the name of the town  -->
+				<cbc:PostalZone>61-841</cbc:PostalZone>																											<!--  kod pocztowy / Zip (postal) code   -->
+				<cbc:CountrySubentity>Region</cbc:CountrySubentity>																							<!--  nazwa regionu / the region of the country name  -->
+				<cac:AddressLine>
+					<cbc:Line>Parter</cbc:Line>																																<!--  linia adresu cz.3 (dodatkowe informacje adresu) / address line part 3 (additional address information)  -->
+				</cac:AddressLine>
+				<cac:Country>
+					<cbc:IdentificationCode>PL</cbc:IdentificationCode>																							<!--  kod kraju / Country code  -->
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID>PL2090001440</cbc:CompanyID>																								<!--  NIP nabywcy (Miasto Poznań / customer's VAT identifier (Poznan City) -->
+				<cac:TaxScheme>
+						<cbc:ID>VAT</cbc:ID>																																	<!--  typ identyfikatora podatku (VAT) / VAT identifier  type-->
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>																																				<!--  dane rejestracyjne nabywcy / customer legal registration data -->
+				<cbc:RegistrationName>Miasto Poznań</cbc:RegistrationName>																				<!--  nazwa rejestracyjna nabywcy / customer legal registration name  -->
+				<cbc:CompanyID>2090001440</cbc:CompanyID>																									<!--  identyfikator rejestracyjny nabywcy / customer legal registration identifier  -->
+			</cac:PartyLegalEntity>
+			<cac:Contact>																																							<!--  dane kontaktowe nabywcy / customer contact data -->
+				<cbc:Name>Imię Nazwisko</cbc:Name>																												<!--  imię i nazwisko osoby kontaktowej / contact person name and surname -->
+				<cbc:Telephone>614621230</cbc:Telephone>																											<!--  numer telefonu osoby kontaktowej / contact person phone no  -->
+				<cbc:ElectronicMail>aaaaa@dostawca.eu</cbc:ElectronicMail>																				<!--  adres e-mail osoby kontaktowej / contact person e-mail address -->
+			</cac:Contact>
+		</cac:Party>
+	</cac:AccountingCustomerParty>
+	<cac:PayeeParty>																																								<!--  dane odbiorcy płatności / Payee data -->
+		<cac:PartyIdentification>
+			<cbc:ID>098740918237</cbc:ID>																																<!--  iidentyfikator odbiorcy płatności (zgodny z listą PEPPOL) MPK / / "Endpoint" identifier – Payee - Id of MPK -->
+		</cac:PartyIdentification>
+		<cac:PartyName>
+			<cbc:Name>MPK w Poznaniu Sp. z o.o</cbc:Name>																									<!--  nazwa odbiorcy płatności / Payee name  -->
+		</cac:PartyName>
+		<cac:PartyLegalEntity>
+			<cbc:CompanyID>6411982340</cbc:CompanyID>																										<!--  identyfikator odbiorcy płatności / Payee legal Id  -->
+		</cac:PartyLegalEntity>
+	</cac:PayeeParty>
+	<cac:TaxRepresentativeParty>																																			<!--  dane przedstawiciela podatkowego / Tax representative data-->
+		<cac:PartyName>
+			<cbc:Name>Nazwa</cbc:Name>																																<!--  nazwa przedstawiciel podatkowy / Tax representative data -->
+		</cac:PartyName>
+		<cac:PostalAddress>																																					<!--  adres przedstawiciela podatkowego / Tax representative address -->
+			<cbc:StreetName>Nazwa ulicy</cbc:StreetName>																										<!--  linia adresu cz.1 (nazwa ulicy) / address line part 1 (street name)  -->
+			<cbc:AdditionalStreetName>123/1</cbc:AdditionalStreetName>																					<!--  linia adresu cz.2 (nazwa ulicy) / address line part 2 (street name)  -->
+			<cbc:CityName>Nazwa miejscowości</cbc:CityName>																								<!--  nazwa miejscowości / the name of the town -->
+			<cbc:PostalZone>54321</cbc:PostalZone>																													<!--  kod pocztowy / Zip (postal) code   -->
+			<cbc:CountrySubentity>Region</cbc:CountrySubentity>																								<!--  nazwa regionu / the region of the country name   -->
+			<cac:AddressLine>
+				<cbc:Line>A</cbc:Line>																																		<!--  linia adresu cz.3 (dodatkowe informacje adresu) / address line part 3 (additional address information)   -->
+			</cac:AddressLine>
+			<cac:Country>
+				<cbc:IdentificationCode>PL</cbc:IdentificationCode>																								<!--  kod kraju / Country code -->
+			</cac:Country>
+		</cac:PostalAddress>
+		<cac:PartyTaxScheme>
+			<cbc:CompanyID>PL7770020410</cbc:CompanyID>																									<!--  NIP przedstawiciela podatk./ tax rep. VAT identifier  -->
+			<cac:TaxScheme>
+				<cbc:ID>VAT</cbc:ID>																																			<!--  typ identyfikatora podatku (VAT) / VAT identifier  type -->
+			</cac:TaxScheme>
+		</cac:PartyTaxScheme>
+	</cac:TaxRepresentativeParty>
+	<cac:Delivery>																																									<!--  dane odbiorcy faktury (jeśli inny niż Kupujący np. ztm) i dostawy / Delicer to and invoice receiver data (if different from customer - ZTM)  -->
+		<cbc:ActualDeliveryDate>2013-05-31</cbc:ActualDeliveryDate>																						<!--  faktyczna data dostawy / actual delivery date -->
+		<cac:DeliveryLocation>
+			<cbc:ID>5790000436118</cbc:ID>																																<!--   iidentyfikator odbiorcy dostawy (zgodny z listą PEPPOL) MPK / / "Endpoint" of Deliver to identifier –  Id of ZTM  -->
+			<cac:Address>
+				<cbc:StreetName>ul. Matejki</cbc:StreetName>																										<!--  linia adresu cz.1 (nazwa ulicy) / address line part 1 (street name)   -->
+				<cbc:AdditionalStreetName>59</cbc:AdditionalStreetName>																					<!--  linia adresu cz.2 (nazwa ulicy) / address line part 2 (street name)  -->
+				<cbc:CityName>Poznań</cbc:CityName>																												<!--  nazwa miejscowości / the name of the town  -->
+				<cbc:PostalZone>60-770</cbc:PostalZone>																											<!--  kod pocztowy / Zip (postal) code  -->
+				<cbc:CountrySubentity>Region</cbc:CountrySubentity>																							<!--  nazwa regionu / the region of the country name   -->
+				<cac:AddressLine>
+					<cbc:Line>Piętro</cbc:Line>																																<!--  linia adresu cz.3 (dodatkowe informacje adresu) / address line part 3 (additional address information)  -->
+				</cac:AddressLine>
+				<cac:Country>
+					<cbc:IdentificationCode>PL</cbc:IdentificationCode>																							<!--  kod kraju / Country code  -->
+				</cac:Country>
+			</cac:Address>
+		</cac:DeliveryLocation>
+		<cac:DeliveryParty>
+			<cac:PartyName>
+				<cbc:Name>Zarząd Transportu Miejskiego</cbc:Name>																							<!--  nazwa odbiorcy (ZTM) / deliver to name (ZTM) -->
+			</cac:PartyName>
+		</cac:DeliveryParty>
+	</cac:Delivery>
+	<cac:PaymentMeans>																																						<!--  sposób zapłaty / payment means -->
+		<cbc:PaymentMeansCode name="Tekst opisowy">31</cbc:PaymentMeansCode>															<!--  kod typu płatności / payment means type code  -->	
+		<cbc:PaymentID>Payref1</cbc:PaymentID>																													<!--  identyfikator płatności / Remittance information  -->
+		<cac:CardAccount>																																						<!--  Dane karty płatniczej / Payment card information  -->
+			<cbc:PrimaryAccountNumberID>123455</cbc:PrimaryAccountNumberID>																		<!--  numer karty / Payment card number  -->
+			<cbc:NetworkID>VISA</cbc:NetworkID>																														<!--  typ karty / Card Network identifier  -->
+			<cbc:HolderName>Imię Nazwisko</cbc:HolderName>																									<!--  nazwa właściciela karty / Payment card holder name -->
+		</cac:CardAccount>
+		<cac:PayeeFinancialAccount>
+			<cbc:ID>PL12123412341234121212121212</cbc:ID>																									<!--  numer konta do wpłaty należności za fakturę za pośrednictwem operatora płatności elektronicznych (np. IBAN) / Payment account identifier at a payment service provider (e.g. IBAN)  -->
+			<cbc:Name>Konto dla płatnosci</cbc:Name>																												<!--  nazwa konta dla płatności za pośrednictwem operatora płatności elektronicznych / the name of the payment account, at a payment service provider  -->
+			<cac:FinancialInstitutionBranch>
+				<cbc:ID>ABCD</cbc:ID>																																		<!--  identyfikator operatora płatności elektronicznych) / An identifier for the payment service provider where a payment account is located  -->
+			</cac:FinancialInstitutionBranch>
+		</cac:PayeeFinancialAccount>
+		<cac:PaymentMandate>
+			<cbc:ID>M01</cbc:ID>																																				<!--  Niepowtarzalny identyfikator płatności przypisany przez odbiorcę płatności do określenia szczegółów polecenia zapłaty. / Unique identifier assigned by the Payee for referencing the direct debit mandate.  -->
+			<cac:PayerFinancialAccount>
+				<cbc:ID>PL12123412341234121212121212</cbc:ID>																								<!--  numer obciążanego konta płatnika / the account to be debited by the direct debit  -->
+			</cac:PayerFinancialAccount>
+		</cac:PaymentMandate>
+	</cac:PaymentMeans>
+	<cac:PaymentTerms>		 																																				<!--  warunki płatności / Payment terms  -->
+		<cbc:Note>2 % upustu przy płatności do 2 dni</cbc:Note>		 																						<!--  opis warunków płatności / Payment terms description  -->
+	</cac:PaymentTerms>
+	<cac:AllowanceCharge>																																						<!--  obciążenia lub upusty / charges or allowances -->
+		<cbc:ChargeIndicator>true</cbc:ChargeIndicator>																											<!--  wskaźnik obciążenia / charge indicator  -->
+		<cbc:AllowanceChargeReasonCode>PC</cbc:AllowanceChargeReasonCode>																	<!--  kod powodu obciążenia / charge reason code -->
+		<cbc:AllowanceChargeReason>Koszty pakowania</cbc:AllowanceChargeReason>															<!--  opis tekstowy powodu obciążenia / Charge reason description text   -->
+		<cbc:MultiplierFactorNumeric>1</cbc:MultiplierFactorNumeric>																						<!--  procent obciążenia / charge percentage  -->
+		<cbc:Amount currencyID="PLN">10.00</cbc:Amount>																										<!--  kwota obciążenia / charge amount  -->
+		<cbc:BaseAmount currencyID="PLN">1000.00</cbc:BaseAmount>																					<!--  wartość bazowa do wyliczenia obciążenia / charge base amount  -->
+		<cac:TaxCategory>																																						
+			<cbc:ID>S</cbc:ID>																																					<!--  kod kategorii opodatkowania obciążenia / charge tax category code -->
+			<cbc:Percent>23</cbc:Percent>																																<!--  procent opodatkowania / tax percentage -->
+			<cac:TaxScheme>
+				<cbc:ID>VAT</cbc:ID>																																			<!--  wskaźnik rodzaju podatku (VAT) / tax scheme code (VAT) -->
+			</cac:TaxScheme>
+		</cac:TaxCategory>
+	</cac:AllowanceCharge>
+	<cac:AllowanceCharge>																																						<!--  obciążenia lub upusty / charges or allowances  -->
+		<cbc:ChargeIndicator>false</cbc:ChargeIndicator>																											<!--  wskaźnik upustu / allowance indicator  -->
+		<cbc:AllowanceChargeReasonCode>66</cbc:AllowanceChargeReasonCode>																	<!--  kod powodu upustu / allowance reason code  -->
+		<cbc:AllowanceChargeReason>Zapłata gotówką</cbc:AllowanceChargeReason>																<!--  opis tekstowy powodu upustu / allowance reason description text   -->
+		<cbc:MultiplierFactorNumeric>2</cbc:MultiplierFactorNumeric>																						<!--  procent upustu / allowance percentage -->
+		<cbc:Amount currencyID="PLN">20.00</cbc:Amount>																										<!--  kwota upustu / allowance amount  -->
+		<cbc:BaseAmount currencyID="PLN">1000.00</cbc:BaseAmount>																					<!--  wartość bazowa do wyliczenia upustu / allowance base amount  -->
+		<cac:TaxCategory>																																					
+			<cbc:ID>S</cbc:ID>																																					<!--  kod kategorii opodatkowania upustu / allowance tax category code  -->
+			<cbc:Percent>23</cbc:Percent>																																<!--  procent opodatkowania / tax percentage -->
+			<cac:TaxScheme>
+				<cbc:ID>VAT</cbc:ID>																																			<!--  wskaźnik rodzaju podatku (VAT) / tax scheme code (VAT) -->
+			</cac:TaxScheme>
+		</cac:TaxCategory>
+	</cac:AllowanceCharge>
+	<cac:TaxTotal>																																									<!--  podsumowanie podatku / tax totals -->
+		<cbc:TaxAmount currencyID="PLN">290.95</cbc:TaxAmount>																						<!--  waluta podatku i podatek ogółem / tax currency and tax tax total -->
+		<cac:TaxSubtotal>																																						<!--  dane dla grupy opodatkowania / tax subtotals -->
+			<cbc:TaxableAmount currencyID="PLN">1265.00</cbc:TaxableAmount>																		<!--  identyfikator waluty i wartość opodatkowana (podstawa opodatkowania) /  tax currency and taxable amount  -->
+			<cbc:TaxAmount currencyID="PLN">290.95</cbc:TaxAmount>																					<!--  identyfikator waluty i wartość podatku / tax currency and tax amount  -->
+			<cac:TaxCategory>
+				<cbc:ID>S</cbc:ID>																																				<!--  kod kategorii opodatkowania / tax category code  -->
+				<cbc:Percent>23</cbc:Percent>																															<!--  procent opodatkowania / tax percentage  -->
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>																																		<!--  wskaźnik rodzaju podatku (VAT) / tax scheme code (VAT) -->
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+		</cac:TaxSubtotal>
+	</cac:TaxTotal>
+	<cac:TaxTotal>																																									<!--  podsumowanie podatku / tax totals -->
+		<cbc:TaxAmount currencyID="EUR">1251.09</cbc:TaxAmount>																						<!--  waluta podatku i podatek ogółem / tax currency and tax tax total -->
+	</cac:TaxTotal>
+	<cac:LegalMonetaryTotal>																																					<!--  Podsumowanie dla faktury / Invoice document totals -->
+		<cbc:LineExtensionAmount currencyID="PLN">1275.00</cbc:LineExtensionAmount>														<!--  suma wartości netto z pozycji faktury / Sum of Invoice line net amount -->
+		<cbc:TaxExclusiveAmount currencyID="PLN">1265.00</cbc:TaxExclusiveAmount>															<!--  suma faktury bez podatku /Invoice total amount without VAT  -->
+		<cbc:TaxInclusiveAmount currencyID="PLN">1555.95</cbc:TaxInclusiveAmount>																<!--  suma faktury z podatkiem / Invoice total amount with VAT  -->
+		<cbc:AllowanceTotalAmount currencyID="PLN">20.00</cbc:AllowanceTotalAmount>															<!--  suma upustów na poziomie dokumentu / Sum of allowances on document level  -->
+		<cbc:ChargeTotalAmount currencyID="PLN">10.00</cbc:ChargeTotalAmount>																	<!--  suma obciążeń na poziomie dokumentu / Sum of charges on document level  -->
+		<cbc:PrepaidAmount currencyID="PLN">1000.00</cbc:PrepaidAmount>																			<!--  suma przedpłat / Paid amount   -->
+		<cbc:PayableAmount currencyID="PLN">555.95</cbc:PayableAmount>																			<!--  wartość do zapłaty / Amount due for payment  -->
+	</cac:LegalMonetaryTotal>
+	<cac:InvoiceLine>		
+		<cbc:ID>1</cbc:ID>																																						<!--  numer pozycji faktury / Line (position) number  -->
+		<cbc:Note>Oklejony taśmą (scratch)</cbc:Note>																											<!--  dodatkowa informacja lub uwaga / Invoice line note  -->
+		<cbc:InvoicedQuantity unitCode="C62">1</cbc:InvoicedQuantity>										<!--  ilość fakturowana / Invoiced quantity  -->
+		<cbc:LineExtensionAmount currencyID="PLN">1275.00</cbc:LineExtensionAmount>														<!--  wartość netto pozycji / Invoice line net amount  -->
+		<cbc:AccountingCost>Koszty001</cbc:AccountingCost>																									<!--  pozycja kosztów u nabywcy / Invoice line Buyer accounting reference  -->
+		<cac:InvoicePeriod>																																						<!--  okres fakturowany  -->
+			<cbc:StartDate>2018-08-01</cbc:StartDate>																												<!--  data początkowa okresu / Invoice line period start date   -->	
+			<cbc:EndDate>2018-08-31</cbc:EndDate>																													<!--  data końcowa okresu / Invoice line period end date  -->	
+		</cac:InvoicePeriod>
+		<cac:OrderLineReference>
+			<cbc:LineID>1</cbc:LineID>																																		<!--  numer odnośnej pozycji zamówienia / Referenced purchase order line reference  -->
+		</cac:OrderLineReference>
+		<cac:DocumentReference>																																			<!--  Referencja do dokumentu powiązanego / Invoice line referenced object identifier -->
+			<cbc:ID schemeID="ZZZ">AVV</cbc:ID>																													<!--   identyfikator schematu identyfikacji i identyfikator dokumentu  bazowego / Invoice line object identifier identification scheme identifier -->
+			<cbc:DocumentTypeCode>130</cbc:DocumentTypeCode>																							<!--  kod typu dokumentu [np.: faktura] / Document type code (e.g. invoice)  -->
+		</cac:DocumentReference>
+		<cac:AllowanceCharge>																																					<!--  obciążenia lub upusty / charges or allowances  -->
+			<cbc:ChargeIndicator>false</cbc:ChargeIndicator>																										<!--  upust / allowance -->
+			<cbc:AllowanceChargeReasonCode>95</cbc:AllowanceChargeReasonCode>																<!--  kod powodu upustu / allowance reason code  -->
+			<cbc:AllowanceChargeReason>zapłata gotówką</cbc:AllowanceChargeReason>															<!--  opis tekstowy powodu upustu / allowance reason description text   -->
+			<cbc:MultiplierFactorNumeric>1</cbc:MultiplierFactorNumeric>																					<!--  procent upustu / allowance percentage -->
+			<cbc:Amount currencyID="PLN">10.00</cbc:Amount>																									<!--  kwota upustu / allowance amount  -->
+			<cbc:BaseAmount currencyID="PLN">1000.00</cbc:BaseAmount>																				<!--  wartość bazowa do wyliczenia upustu / allowance base amount   -->
+		</cac:AllowanceCharge>
+		<cac:AllowanceCharge>																																					<!--  obciążenia lub upusty / charges or allowances  -->
+			<cbc:ChargeIndicator>true</cbc:ChargeIndicator>																										<!--  obciążenie / charge  -->
+			<cbc:AllowanceChargeReasonCode>PC</cbc:AllowanceChargeReasonCode>																<!--  kod powodu obciążenia / charge reason code  -->
+			<cbc:AllowanceChargeReason>koszty pakowania</cbc:AllowanceChargeReason>														<!--  opis tekstowy powodu obciążenia / charge reason description text   -->
+			<cbc:MultiplierFactorNumeric>1</cbc:MultiplierFactorNumeric>																					<!--  procent obciążenia / charge percentage  -->
+			<cbc:Amount currencyID="PLN">10.00</cbc:Amount>																									<!--  kwota obciążenia / charge amount  -->
+			<cbc:BaseAmount currencyID="PLN">1000.00</cbc:BaseAmount>																				<!--  wartość bazowa do wyliczenia obciążenia / charge base amount   -->
+		</cac:AllowanceCharge>
+		<cac:Item>
+			<cbc:Description>Procesor: Intel Core 2 Duo SU9400 LV (1.4GHz). RAM:
+				3MB. ekran 1440x900</cbc:Description>																													<!--  opis pozycji / Item description  -->
+			<cbc:Name>Laptop DELL</cbc:Name>																														<!--  nazwa pozycji / Item name  -->
+			<cac:BuyersItemIdentification>
+				<cbc:ID>ID007</cbc:ID>																																		<!--  identyfikator wg kupującego / Item Buyer's identifier  -->
+			</cac:BuyersItemIdentification>
+			<cac:SellersItemIdentification>
+				<cbc:ID>SID008</cbc:ID>																																		<!--  identyfikator wg sprzedającego / Item Seller's identifier  -->
+			</cac:SellersItemIdentification>
+			<cac:StandardItemIdentification>
+				<cbc:ID schemeID="0160">5900070011115</cbc:ID>																								<!--  identyfikator standardowy [tutaj GS1 GTIN] / Item standard identifier [here: GS1 GTIN] -->
+			</cac:StandardItemIdentification>
+			<cac:OriginCountry>
+				<cbc:IdentificationCode>PL</cbc:IdentificationCode>																								<!--  kod kraju pochodzenia pozycji (ISO 3166) / Item country of origin code (ISO 3166)  -->
+			</cac:OriginCountry>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode  listID="ZZZ" listVersionID="v1">43211503</cbc:ItemClassificationCode>							<!--  kod systemu klasyfikacji oraz kod klasyfikacji pozycji / Item classification system code and item classification code (e.g. UNSPSC)  -->
+			</cac:CommodityClassification>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="ZZZ" listVersionID="v1">30213100-6</cbc:ItemClassificationCode>						<!--   kod systemu klasyfikacji oraz kod klasyfikacji pozycji / Item classification system code and item classification code (e.g. CPV)  -->
+			</cac:CommodityClassification>
+			<cac:ClassifiedTaxCategory>																																		
+				<cbc:ID>S</cbc:ID>																																				<!--  kod kategorii opodatkowania [VAT] / Tax category code (VAT)  -->
+				<cbc:Percent>23</cbc:Percent>																															<!--  procent opodatkowania [23%, 8%, 5%] / Tax percentage [23%, 8%, 5%] -->
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>																																		<!--  wskaźnik rodzaju podatku (VAT) / Tax scheme code (VAT) -->
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+			<cac:AdditionalItemProperty>																																		<!--  Dodatkowe parametry pozycji / Additional item attributes -->
+				<cbc:Name>Kolor</cbc:Name>         																														<!--  nazwa dodatkowego parametru dla pozycji / Item attribute name -->
+				<cbc:Value>czarny</cbc:Value>        																													<!--  wartość dodatkowego parametru dla pozycji / Item attribute value -->
+			</cac:AdditionalItemProperty>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="PLN">1275.00</cbc:PriceAmount>																				<!--  cena netto dla pozycji / Item net price  -->
+			<cbc:BaseQuantity unitCode="C62">1</cbc:BaseQuantity>																							<!--  ilość podstawowa dla ceny jednostkowej / Item price base quantity  -->
+			<cac:AllowanceCharge>
+				<cbc:ChargeIndicator>false</cbc:ChargeIndicator>																									<!--  wskaźnik (upust - obowiązkowa wartość „false”) / Charge indicator - value must be “false”  -->
+				<cbc:Amount currencyID="PLN">225.00</cbc:Amount>																							<!--  wartość upustu w cenie pozycji / Item price discount amount  -->
+				<cbc:BaseAmount currencyID="PLN">1500.00</cbc:BaseAmount>																			<!--  cena bazowa dla pozycji / Item base price  -->
+			</cac:AllowanceCharge>
+		</cac:Price>
+	</cac:InvoiceLine>
+</Invoice>

@@ -1,5 +1,6 @@
 # einvoice-peppol-bis
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/pl.owlsy/einvoice-peppol-bis/badge.svg)](https://maven-badges.herokuapp.com/maven-central/cz.jirutka.rsql/rsql-parser)
+![](https://img.shields.io/github/workflow/status/owlsy/einvoice-peppol-bis/einvoice-peppol-bis)
 
 Java library for working with XML Invoices of [PEPPOL BIS Billing 3.0](https://docs.peppol.eu/poacc/billing/3.0/)
 
@@ -41,3 +42,4 @@ Invoice invoice = new Invoice();
 // you can fill invoice with data here
 String xml = engine.writeInvoice(invoice);
 ```
+
